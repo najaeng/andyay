@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.app-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.app-menuwrapper {
+  width: 20%;
+}
