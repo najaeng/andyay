@@ -1,0 +1,9 @@
+.menu-list {    
+    font-size: 15px;
+    padding: 12px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: black;
+}

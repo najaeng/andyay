@@ -1,12 +1,17 @@
 .App {
   text-align: center;
-}
-
-.app-title {
-  font-size: 50px;
-  font-weight: bold;
+  display: flex;
 }
 
 .app-menuwrapper {
   width: 20%;
+  height:100%;
+  border: 1px solid #cdcdcd;
+}
+
+.app-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 40px 15px;
+  cursor: pointer;
 }

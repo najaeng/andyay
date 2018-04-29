@@ -1,23 +1,57 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import Menu from './components/Menu/Menu';
+import About from './components/About/About';
+import Doodle from './components/Doodle/Doodle';
+import Photo from './components/Photo/Photo';
+
 import './App.css';
 
 const pageTitle = 'N.J. Space';
 
 class App extends Component {
-  render() {
+  routes = [
+  {
+      path: '/About',
+      components: About
+  },
+  {
+      path: '/Doodle',
+      components: Doodle
+  },
+  {
+      path: '/Photo',
+      components: Photo
+  }
+  ];
+
+  renderApp() {
     return (
       <div className="App">
         <div className="app-menuwrapper">
-          <div className="app-title">
+          <div className="app-title" onClick={() => window.location.href = '/'}>
             {pageTitle}
-            </div>
+          </div>
+          <Menu />
         </div>
-        <div className="app-content">
-
+        <div className="app-content">          
+          <Route exact path="/about" component={About}/>
+          <Route path="/photo" component={Photo}/>
+          <Route path="/doodle" component={Doodle}/>
         </div>
       </div>
     );
+  }
+
+  render() {
+    return (
+      <Router>
+        <div>
+          {this.renderApp()}
+        </div>
+      </Router>
+    )
   }
 }
 
