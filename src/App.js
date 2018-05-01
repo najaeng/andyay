@@ -8,7 +8,7 @@ import Photo from './components/Photo/Photo';
 
 import './App.css';
 
-const pageTitle = 'N.J. Space';
+const pageTitle = 'N.J, and Yay!';
 
 class App extends Component {
   routes = [
@@ -28,7 +28,7 @@ class App extends Component {
 
   renderApp() {
     return (
-      <div className="App">
+      <div className="app-container">
         <div className="app-menuwrapper">
           <div className="app-title" onClick={() => window.location.href = '/'}>
             {pageTitle}

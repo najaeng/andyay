@@ -1,17 +1,30 @@
-.App {
+.app-container {
   text-align: center;
-  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.app-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 40px 15px;
+  cursor: pointer;
+  color: #ce413b;
 }
 
 .app-menuwrapper {
   width: 20%;
-  height:100%;
-  border: 1px solid #cdcdcd;
+  height: 100%;
+  position: fixed;
+  border-right: 1px solid #cdcdcd;
 }
 
-.app-title {
-  font-size: 48px;
-  font-weight: bold;
-  margin: 40px 15px;
-  cursor: pointer;
+.app-content {
+  height: 100%;
+}
+
+@media screen and (max-width:700px) {
+  .app-menuwrapper {
+    display: none;
+  }
 }
