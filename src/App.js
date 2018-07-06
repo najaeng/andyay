@@ -1,58 +1,58 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import Menu from './components/Menu/Menu';
+import Header from './components/Header/Header';
+import Init from './components/Init/Init';
 import About from './components/About/About';
-import Doodle from './components/Doodle/Doodle';
-import Photo from './components/Photo/Photo';
+import Contact from './components/Contact/Contact';
+import Portfolio from './components/Portfolio/Portfolio';
 
 import './App.css';
 
-const pageTitle = 'N.J, and Yay!';
-
 class App extends Component {
-  routes = [
-  {
-      path: '/About',
-      components: About
-  },
-  {
-      path: '/Doodle',
-      components: Doodle
-  },
-  {
-      path: '/Photo',
-      components: Photo
-  }
-  ];
+  constructor(props){
+    super(props);
 
-  renderApp() {
+    this.state = {
+      isTop: true
+    }
+  }
+
+  scrollEvent = () => {
+    //탑일경우 아닐경우 나눠야됨
+    //this.setState({isTop: false});
+    //$(React.findDOMNOde(this.refs.header))
+  }
+
+  render() {
     return (
       <div className="app-container">
-        <div className="app-menuwrapper">
-          <div className="app-title" onClick={() => window.location.href = '/'}>
-            {pageTitle}
-          </div>
-          <Menu />
-        </div>
-        <div className="app-content">          
-          <Route exact path="/about" component={About}/>
-          <Route path="/photo" component={Photo}/>
-          <Route path="/doodle" component={Doodle}/>
+        <Header isTop={this.state.isTop}/>
+        <div className="app-content" onScroll={this.scrollEvent()}>
+          <Init />
+          <About />
+          <Portfolio />
+          <Contact />
+          {/* <Route path="/" component={Init}/>
+          <Route path="/about" component={About}/>
+          <Route path="/portfolio" component={Portfolio}/>
+          <Route path="/contact" component={Contact}/> */}
         </div>
       </div>
     );
   }
 
-  render() {
-    return (
-      <Router>
-        <div>
-          {this.renderApp()}
-        </div>
-      </Router>
-    )
-  }
+  //header에서 메뉴눌러서 이동하는 Link사용하려면 Router안에 넣어줘야한다.
+  // render() {
+  //   return (
+  //     <Router>
+  //       <div>
+  //         {this.renderApp()}
+  //       </div>
+  //     </Router>
+  //   )
+  // }
 }
 
 export default App;

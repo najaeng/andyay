@@ -4,27 +4,15 @@
   width: 100%;
 }
 
-.app-title {
-  font-size: 40px;
-  font-weight: bold;
-  margin: 40px 15px;
-  cursor: pointer;
-  color: #ce413b;
-}
-
-.app-menuwrapper {
-  width: 20%;
-  height: 100%;
-  position: fixed;
-  border-right: 1px solid #cdcdcd;
-}
-
 .app-content {
-  height: 100%;
-}
-
-@media screen and (max-width:700px) {
-  .app-menuwrapper {
-    display: none;
-  }
+  height: 93%;
+  width: 100%;
+  position: fixed;
+  margin-top: 67px;
+  overflow-y: scroll;
+  background-color: #F5F3F3;
+  /* overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  padding: 155px 80px; */
 }

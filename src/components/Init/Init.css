@@ -1,0 +1,14 @@
+.init{
+  height: 881px;
+  font-family: 'Nanum Square';
+}
+
+.init_wrapper{
+    padding-top: 13%;
+    line-height: 160%;
+    font-weight: 200;
+}
+
+.skill_name{
+  font-weight: bold;
+}

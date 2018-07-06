@@ -1,0 +1,62 @@
+.header {
+    width: 100%;
+    height: 67px;
+    position: fixed;
+    border-bottom: 1px solid gray;
+    z-index: 10;
+}
+
+.title_area {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 8px 0 0 30px;
+    float: left;
+    top: 0px;
+    left: 0px;
+}
+
+.title{    
+    cursor: pointer;
+}
+
+.menu_icon_4m{
+    display: none;
+    width: 30px;
+    margin-top: 24px;
+    left: 4%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.menu{
+    width: auto;
+    float: right;
+    margin-top: 21px;
+    font-family: 'Karla';
+}
+
+.menu-list {    
+    font-size: 20px;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+/* 클릭했을때 아래 색 #3D94C9 */
+
+@media only screen and (max-width:960px) {
+    .menu {
+        display: none;
+    }
+
+    .title_area{
+        width: 100%;
+        height: 70%;
+        font-size: 28px;
+        margin: 0 auto;
+        padding-top: 17px;
+    }
+
+    .menu_icon_4m{
+        display: block;
+    }
+    
+}

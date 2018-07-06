@@ -1,0 +1,16 @@
+.all_photo {
+    width: 95%;
+    height: 100%;
+    padding: 7px 0 0 10px;
+}
+
+.photo_area {
+    width: 300px;
+    height: 200px;
+    float: left;
+    padding: 8px;
+}
+
+.photo {
+    width: 100%;
+}
