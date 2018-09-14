@@ -3,12 +3,16 @@ import React, { Component } from 'react';
 import images from '../../imgs/index.js';
 import './Header.css';
 
-class Header extends Component {
-    componentDidMount = () =>{
-        if(this.props.isTop){
+var menu_display = {
+    display: 'none'
+};
 
-        }else if(!this.props.isTop){
-            
+class Header extends Component {
+    constructor(){
+        super();
+
+        this.state = {
+            display: false
         }
     }
 
@@ -24,19 +28,32 @@ class Header extends Component {
         
     }
 
+    clickMenu = () => {
+        this.setState({display: true});
+    }
+
     render(){
+        menu_display = this.state.display ? {'display': 'block'} : {'display': 'none'};
+        
         return(
             <div className="header">
-                <div className="title_area">
+                <div className="titleArea">
                     <span className="title" onClick={() => window.location.href = '/'}>And_Yay</span>
                 </div>
-                <div>
-                    <img className="menu_icon_4m" src={images['menu_icon']}/>
+                {/* mobile area */}
+                <img className="menuIcon4m" src={images['menu_icon']} onClick={() => this.clickMenu()}/>
+                <div className="menuArea4m" style={menu_display}>
+                    <div className="menuList4m">
+                        <div className="eachMenu4m" onClick={this.goToAbout()}>ABOUT ME</div>
+                        <div className="eachMenu4m" onClick={this.goToPortf()}>PORTFOLIO</div>
+                        <div className="eachMenu4m" onClick={this.goToContact()}>CONTACT</div>
+                    </div>
                 </div>
-                <div className="menu">
-                    <span className="menu-list" onClick={this.goToAbout()}>ABOUT ME</span>
-                    <span className="menu-list" onClick={this.goToPortf()}>PORTFOLIO</span>
-                    <span className="menu-list" onClick={this.goToContact()}>CONTACT</span>
+
+                <div className="menuArea">
+                    <span className="eachMenu" onClick={this.goToAbout()}>ABOUT ME</span>
+                    <span className="eachMenu" onClick={this.goToPortf()}>PORTFOLIO</span>
+                    <span className="eachMenu" onClick={this.goToContact()}>CONTACT</span>
                 </div>
             </div>
         );

@@ -7,7 +7,7 @@ class About extends Component {
         return (
             <div className="about">
                 <div className="about_wrapper content_font-size_4m">
-                    dd
+                    성실함으로 꾸준히 발전하는 '김나정' 입니다.
                 </div>
             </div>
         )

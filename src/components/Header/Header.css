@@ -6,7 +6,7 @@
     z-index: 10;
 }
 
-.title_area {
+.titleArea {
     font-size: 40px;
     font-weight: bold;
     margin: 8px 0 0 30px;
@@ -15,11 +15,27 @@
     left: 0px;
 }
 
-.title{    
+.title {    
     cursor: pointer;
 }
 
-.menu_icon_4m{
+.menuArea {
+    width: auto;
+    float: right;
+    margin-top: 21px;
+    font-family: 'Karla';
+}
+
+.eachMenu {    
+    font-size: 20px;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+/* 클릭했을때 아래 색 #3D94C9 */
+
+
+/* mobile start */
+.menuIcon4m {
     display: none;
     width: 30px;
     margin-top: 24px;
@@ -28,26 +44,35 @@
     cursor: pointer;
 }
 
-.menu{
-    width: auto;
-    float: right;
-    margin-top: 21px;
+.menuArea4m {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    opacity: 0.85;
+    font-size: 20px;
+}
+
+.menuList4m {
+    margin-top: 40px;
+}
+
+.eachMenu4m {
+    color: white;
+    font-weight: bold;
+    line-height: 80px;
     font-family: 'Karla';
 }
+/* mobile end */
 
-.menu-list {    
-    font-size: 20px;
-    padding: 20px 30px;
-    cursor: pointer;
-}
-/* 클릭했을때 아래 색 #3D94C9 */
 
+/**/
 @media only screen and (max-width:960px) {
-    .menu {
+    .menuArea {
         display: none;
     }
 
-    .title_area{
+    .titleArea {
         width: 100%;
         height: 70%;
         font-size: 28px;
@@ -55,8 +80,12 @@
         padding-top: 17px;
     }
 
-    .menu_icon_4m{
+    .menuIcon4m {
         display: block;
+    }
+
+    .menuArea4m {
+        display: none;
     }
     
 }

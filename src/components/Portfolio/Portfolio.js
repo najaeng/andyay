@@ -9,7 +9,7 @@ class Portfolio extends Component {
         return (
             <div className="portf">                
                 <div className="portf_wrapper content_font-size_4m">
-                    포트폴리오
+                    포트폴리오 영역
                 </div>
             </div>
         )

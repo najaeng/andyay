@@ -2,21 +2,28 @@
     font-size: 30px;
 }
 
+.show{
+    display: block;
+}
 
-@media only screen and (min-width:200px) and (max-width:600px) {
-    .content_font-size_4m{
-      font-size: 15px;
+.hide{
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    .content_font-size_4m {
+        font-size: 15px;
     }
-  }
-  
-  @media only screen and (min-width:600px) and (max-width:960px){
-    .content_font-size_4m{
-      font-size: 25px;
+}
+
+@media only screen and (min-width:600px) and (max-width:960px){
+    .content_font-size_4m {
+        font-size: 25px;
     }
-  }
-  
-  @media only screen and (min-width:1200px) {
-    .content_font-size_4m{
-      font-size: 30px;
+}
+
+@media only screen and (min-width:1200px) {
+    .content_font-size_4m {
+        font-size: 30px;
     }
-  }
+}

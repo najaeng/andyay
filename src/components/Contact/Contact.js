@@ -7,7 +7,7 @@ class Contact extends Component {
         return (
             <div className="contact">
                 <div className="contact_wrapper content_font-size_4m">
-                    주소 : 남양주시 화도읍<br/>
+                    주소 : 경기도 남양주시<br/>
                     메일 : najaeng@naver.com<br/><br/>
                 </div>
             </div>
